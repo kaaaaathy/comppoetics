@@ -10,11 +10,10 @@ body{
   font-weight: normal;
   font-family: Arial, sans-serif;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 30px;
 
   color:white;
   background: mediumorchid;
-
   letter-spacing: 0.5px;
 
   user-select: none;
@@ -37,30 +36,36 @@ body{
   border:1px solid white;
   padding: 10px 30px;
   margin: 20px 0;
-  line-height: 2rem;
   transition: all 0.25s ease;
   border-radius: 8px;
   font-size:16px;
+  cursor: help;
+
 }
 
 
 .row:hover {
   background: white;
   color:mediumorchid;
-  cursor: default;
 }
 
 .white{
   background: white;
   color:mediumorchid;
-
+  cursor: default;
 }
+
 
 .white a{
   color:mediumorchid;
   border-bottom: 1px solid mediumorchid;
 
 
+}
+
+.row a:hover{
+  opacity:0.5;
+  transition: 0.2s opacity;
 }
 
 .row:hover a {
@@ -77,9 +82,7 @@ body{
   justify-content: flex-start;
   align-items: baseline;
   flex-wrap: wrap;
-  /* padding: 10px 0px; */
 }
-
 
 .item-heading {
   font-weight: normal;
@@ -141,7 +144,9 @@ body{
 
 }
 
-
+.schedule img{
+  filter: grayscale(100%);
+}
 
 
 /*———————————————TYPOGRAPHY STYLES———————————————*/
@@ -166,7 +171,7 @@ p {
   flex-wrap: wrap;
 }
 h1 {
-  font-weight: inherit;
+  font-weight: normal;
   font-size: 32px;
   line-height: 40px;
   font-family: 'courier prime';
@@ -174,9 +179,9 @@ h1 {
 
 }
 h2 {
-  font-weight: inherit;
+  font-weight: normal;
   font-size: 20px;
-  line-height: 32px;
+
 }
 
 h3 {
@@ -222,14 +227,20 @@ h3 {
   cursor:help;
 }
 
-
+@media only screen and (max-width: 960px) {
+  body {
+    margin: 20px 40px;
+  }
+}
 @media only screen and (max-width: 768px) {
   body {
-    margin: 0 40px;
+    margin: 0px 20px;
   }
 
   .row {
     flex-wrap: wrap;
+    padding:20px;
+    padding-bottom: 0px;
   }
 
   .doc {
@@ -237,7 +248,7 @@ h3 {
   }
   .p-image {
       width:100%;
-      max-height: 300px;
+      max-height: 500px;
   }
   .imageCaption {
     width:100%;
@@ -245,9 +256,6 @@ h3 {
 
   .item-heading{
     width: 100%;
-    line-height: 40px;
-    padding: 0;
-
   }
   .contents{
     margin-left: 0px;
