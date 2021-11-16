@@ -40,9 +40,9 @@ $(function() {
 			$("#menu").toggleClass("border");
 		});
 
-		$("#menu").draggable({ cancel: "li" });
+		// $("#menu").draggable({ cancel: "li" });
 		if(window.innerWidth < 768) {
-				$("#menu").draggable('disable').attr('style','');
+				// $("#menu").draggable('disable').attr('style','');
 		};
     	// $( "div, p" ).disableSelection();
 	});
@@ -56,9 +56,9 @@ $(function() {
     // around on touch devices. If you don't like that remove touch-punch.
     $(window).resize(function() {
         if(window.innerWidth < 768) {
-            $("#menu").draggable('disable').attr('style','');
+            // $("#menu").draggable('disable').attr('style','');
         } else if(window.innerWidth > 768) {
-            $("#menu").draggable('enable');
+            // $("#menu").draggable('enable');
             $("#navigation").attr('style','');
         };
     });

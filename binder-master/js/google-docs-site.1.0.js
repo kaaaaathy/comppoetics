@@ -1,8 +1,8 @@
 var siteData;
-$("#menu").draggable('disable');
+// $("#menu").draggable('disable');
 
 $(function() {
-	$("#menu").draggable('disable');
+	// $("#menu").draggable('disable');
 
 	//load the json
 	$.get( "info.json", function( data ) {
@@ -39,10 +39,18 @@ $(function() {
 
 		$('#menu-open').click(function(){
 			$("#navigation").toggle();
-			$("#menu").toggleClass("border");
+			// $("#menu").toggleClass("border");
 		});
 
-		$("#menu").draggable({ cancel: "li" });
+// THIS DOESNT WORK BUT NOT SURE WHY
+		$('#background-site').click(function(){
+			if($("#navigation").is( ":visible" )){
+				$("#navigation").toggle();
+			}
+
+		})
+
+		// $("#menu").draggable({ cancel: "li" });
     	// $( "div, p" ).disableSelection();
 	});
 
@@ -55,9 +63,9 @@ $(function() {
     // around on touch devices. If you don't like that remove touch-punch.
     $(window).resize(function() {
         if(window.innerWidth < 768) {
-            $("#menu").draggable('disable').attr('style','');
+            // $("#menu").draggable('disable').attr('style','');
         } else if(window.innerWidth > 768) {
-					$("#menu").draggable('disable');
+					// $("#menu").draggable('disable');
 
             // $("#menu").draggable('enable');
             $("#navigation").attr('style','');

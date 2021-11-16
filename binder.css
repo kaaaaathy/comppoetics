@@ -102,22 +102,23 @@ ul, li {
   display: flex;
   flex-wrap: wrap;
 }
-	#menu {
-    position: absolute;
-    width: auto;
-		font-size: 16px;
-    text-align: left;
-		z-index:10;
-		left: 0px;
-    right: 0px;
-		top: 0px;
-    border-bottom: 1px solid white;
+#menu {
+  position: absolute;
+  width: auto;
+	font-size: 16px;
+  text-align: left;
+	z-index:10;
+	left: 0px;
+  right: 0px;
+	top: 0px;
+  border-bottom: 1px solid white;
 
-	}
+}
 
 	#navigation{
     /* padding-left: 500px; */
     width:auto;
+    display: none;
     background: mediumorchid;
     margin:0px;
     padding:16px 20px!important;
@@ -126,6 +127,11 @@ ul, li {
     flex-flow: wrap;
 
 	}
+
+ul {
+    display: flex;
+    flex-flow: wrap;
+  }
 
 #navigation a {
   border: 1px solid white;
