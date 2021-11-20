@@ -6,7 +6,7 @@
 
 
 body{
-  margin: 20px 0px 40px 80px;
+  margin: 20px 0px 40px 40px;
   font-weight: normal;
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -228,19 +228,22 @@ h3 {
   cursor:help;
 }
 
-@media only screen and (max-width: 960px) {
+/* @media only screen and (max-width: 960px) {
   body {
     margin: 20px 40px;
   }
-}
+} */
 @media only screen and (max-width: 768px) {
   body {
     margin: 0px 20px;
   }
 
+  .button {
+    margin-left: 10px;
+  }
+
   .row {
     flex-wrap: wrap;
-    padding:20px;
     padding-bottom: 0px;
   }
 
