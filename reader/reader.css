@@ -12,28 +12,40 @@
 
 /* reader images */
 .r-image{
-  padding:4px;
-  max-width:250;
-  height: 250px;
+  max-width: 500px;
   display:none;
+  position:fixed;
+  top:20px;
+  right:20px;
+  text-align: right;
   padding:0px;
 
+
 }
+
+.r-image img{
+  max-width: 500px;
+  max-height: 250px;
+  box-shadow: 4px 4px 12px lime;
+}
+
+.r-image .lime{
+  font-size: 16px;
+  padding:4px;
+  background:lime;
+  color:black;
+}
+
 
 
 /* makes student work image appear */
 .ta-da {
   cursor: help;
-
 }
-.ta-da:hover .r-image {
+.ta-da:hover .r-image{
   display:block;
-  position:fixed;
-  top:20px;
-  right:20px;
-  box-shadow: 4px 4px 12px lime;
-
 }
+
 
 .inner-row {
   max-width: 800px;

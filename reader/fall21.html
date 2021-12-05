@@ -34,8 +34,7 @@
 </div>
 
 <div class = "reader-row" v-for="(item,index) in allItems">
-    <!-- Activate this if you want a toggle effect -->
-      <div class = "inner-row ta-da"><img v-bind:src="item.img" class = "r-image">
+      <div class = "inner-row ta-da"><div class="r-image"><img v-bind:src="item.img"><br><span class="lime" v-if = "item.info">{{item.info}}</span></div>
 
         <div class="index small"><span class="decoration">✻</span>&nbsp;&nbsp;{{index}}</div>
       <div style ="padding-right:5px;">{{item.artist}}</div>
@@ -74,34 +73,44 @@ new Vue({
               artist:`Ruby Miller`,
               project:`Between 2 Hills`,
               mobile:`no`,
-              info:` is a project about this or that or maybe those, and definitely something about there.`,
+              info:``,
               img:"fall21/ruby1.png",
               url:"https://simplistic-gem-case.glitch.me/"
+          },
+          {
+
+              artist:`Joyce Ho`,
+              project:`Poetics of Interruption`,
+              mobile:`no`,
+              info:``,
+              img:"fall21/poetics_of_interruption.gif",
+              url:"https://poetics-of-interruption.glitch.me/"
           },
           {
 
               artist:`Gabby Hoefer`,
               project:`Mapping New York Commutes`,
               mobile:`no`,
-              info:` is a project about this or that or maybe those, and definitely something about there.`,
+              info:``,
               img:"fall21/gabby3.png",
               url:"https://bigcitybigmaps.glitch.me/"
           },
+
           {
 
-              artist:`Ruby Miller`,
-              project:`Atom and Eve`,
+              artist:`Carlos Perez-Ruiz`,
+              project:`Adult Friends`,
               mobile:`no`,
-              info:` is a project about this or that or maybe those, and definitely something about there.`,
-              img:"fall21/atom.gif",
-              url:"fall21/atom.gif"
+              info:``,
+              img:"fall21/adultfriends.png",
+              url:"https://adult-friends.glitch.me/"
           },
           {
 
               artist:`Qiyang Peng`,
               project:`Daily Things`,
               mobile:`no`,
-              info:` is a project about this or that or maybe those, and definitely something about there.`,
+              info:``,
               img:"fall21/Daily_Things.png",
               url:"https://daily-things.glitch.me/"
           },
@@ -111,16 +120,25 @@ new Vue({
               artist:`Mia Koenig`,
               project:`Letters to a Loved One 1`,
               mobile:`no`,
-              info:` is a project about this or that or maybe those, and definitely something about there.`,
+              info:``,
               img:"fall21/Letters_Project_1.png",
               url:"https://messages-to-loved-one.glitch.me/"
+          },
+          {
+
+              artist:`Carlos Perez-Ruiz`,
+              project:`Pachinko Record`,
+              mobile:`no`,
+              info:``,
+              img:"fall21/panchikosrecord.png",
+              url:"https://panchikos-record.glitch.me/"
           },
           {
 
               artist:`Mia Koenig`,
               project:`Letters to a Loved One 2`,
               mobile:`no`,
-              info:` is a project about this or that or maybe those, and definitely something about there.`,
+              info:``,
               img:"fall21/Letters_Project_2.png",
               url:"https://book-letters.glitch.me/"
           },
@@ -129,7 +147,7 @@ new Vue({
               artist:`Qiyang Peng`,
               project:`Algorithm Geography`,
               mobile:`no`,
-              info:` is a project about this or that or maybe those, and definitely something about there.`,
+              info:``,
               img:"fall21/Algorithm_Geography.png",
               url:"https://algorithm-geography.glitch.me/"
           },
@@ -138,56 +156,71 @@ new Vue({
               artist:`Gabby Hoefer`,
               project:`Many Ways to Reach`,
               mobile:`no`,
-              info:` is a project about this or that or maybe those, and definitely something about there.`,
+              info:``,
               img:"fall21/gabby2.png",
               url:"https://reachh.glitch.me/"
           },
 
           {
 
-              artist:`Name`,
-              project:`Project name`,
+              artist:`Adele Roncey`,
+              project:`Glyphs & (My) Digital Self`,
               mobile:`no`,
-              info:` is a project about this or that or maybe those, and definitely something about there.`,
-              img:"URL",
+              info:`Visual conversation between Instagram's algorithm, Marina Esmeraldo's "Breaking Free from the Feed" and my own writing and thoughts on creativity and social media.`,
+              img:"fall21/adele2.png",
               url:""
+          },
+
+          {
+
+              artist:`Manmeet Sodhi`,
+              project:`a week where I felt alone`,
+              mobile:`no`,
+              info:`A collection of lyrics that I listened to during a week where I felt alone. With music being a coping mechanism, I wanted to capture the process of healing and vulnerability through this publication.`,
+              img:"fall21/manny1.png",
+              url:""
+          },
+
+          {
+
+              artist:`Ruby Miller`,
+              project:`Atom and Eve`,
+              mobile:`no`,
+              info:``,
+              img:"fall21/atom.gif",
+              url:"fall21/atom.gif"
           },
           {
 
-              artist:`Name`,
-              project:`Project name`,
+              artist:`Joyce Ho`,
+              project:`t0wer04b@bel`,
               mobile:`no`,
-              info:` is a project about this or that or maybe those, and definitely something about there.`,
-              img:"URL",
-              url:""
+              info:``,
+              img:"fall21/t0we04bbel_3.jpg",
+              url:"https://tower-of-babel.glitch.me/"
           },
           {
 
-              artist:`Name`,
-              project:`Project name`,
+              artist:`Ruby Miller`,
+              project:`Occupants`,
               mobile:`no`,
-              info:` is a project about this or that or maybe those, and definitely something about there.`,
-              img:"URL",
+              info:`A powerpoint performance on pods, occupants and the movies.`,
+              img:"fall21/ruby.gif",
               url:""
           },
+
           {
 
-              artist:`Name`,
-              project:`Project name`,
+              artist:`Carlos Perez-Ruiz`,
+              project:`Distant Nostalgia`,
               mobile:`no`,
-              info:` is a project about this or that or maybe those, and definitely something about there.`,
-              img:"URL",
-              url:""
+              info:``,
+              img:"fall21/distantnostalgia.png",
+              url:"https://distant-nostalgia.glitch.me/"
           },
-          {
 
-              artist:`Name`,
-              project:`Project name`,
-              mobile:`no`,
-              info:` is a project about this or that or maybe those, and definitely something about there.`,
-              img:"URL",
-              url:""
-          }
+
+
 
 
 
