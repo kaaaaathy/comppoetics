@@ -35,7 +35,26 @@ $(function() {
 		//load the google doc
 		locationHashChanged();
 
-		$('#menu-open').click(function(){
+		// $("#background-site").click(function(){
+		//  $("#navigation").hide();
+		//  console.log("hi");
+		// });
+	window.focus()
+
+
+
+	window.addEventListener("blur", () => {
+		if(window.innerWidth < 768) {
+			if (document.activeElement.tagName === "IFRAME") {
+      console.log("clicked");
+			$("#navigation").hide();
+
+    }
+	}
+  });
+
+		$('#menu-open').click(function(event){
+			event.stopPropagation();
 			$("#navigation").toggle();
 			$("#menu").toggleClass("border");
 		});
