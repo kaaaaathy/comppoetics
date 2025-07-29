@@ -20,18 +20,25 @@
       authorship, and classification.
     </h2>
     <br>
-    <p>Student work →
+    <p>LINKS →
+      <a class="button" href="https://discord.gg/ypXy4CEyAD" target="_blank">Discord</a><a class="button"
+        href="https://risd.zoom.us/j/7279711590" target="_blank">Zoom</a><a class="button"
+        href="https://docs.google.com/spreadsheets/d/1UWK-H6fdBnnow1oYrt0Z-cySY97br8MUAwRnK126-fY/edit?usp=sharing"
+        target="_blank">Office Hours</a><a class="button" href="mailto:kwu08@risd.edu">Email Kathy</a>
+    </p>
+    <!-- <p>Student work →
       <a class="button" href="https://www.instagram.com/comppoetics/" target="_blank">Instagram</a>
       <a class="button" href="reader/spring21.html" target="_blank">Spring 2021</a>
       <a class="button" href="reader/fall21.html" target="_blank">Fall 2021</a>
-    </p>
+    </p> -->
   </div>
 
   <div id="container">
     <div class="row" v-for="(week,index) in weeks">
       <div class="item" @click="week.shown = !week.shown">
-        <div class="item-text">{{index+1}}— &nbsp;&nbsp;</div>
-        <div class="item-heading">{{week.theme}}</div>
+        <div class="item-heading"><span class="date">{{index+1}}</span>
+          {{week.theme}}</div>
+        <div class="date" v-html="week.date"></div>
       </div>
 
       <!-- <div class="caret">X</div> -->
@@ -48,8 +55,9 @@
         <div v-html="week.inClass"></div>
 
         <h3>
-          Readings</span></h3>
-        <div v-html="week.reading"></div>
+          FOR NEXT CLASS</span></h3>
+        <div v-html="week.forNext"></div>
+
 
       </div>
     </div>
@@ -90,7 +98,8 @@
         weeks: [
           {
             shown: false,
-            theme: `What is Computational Poetics?`,
+            theme: `Beginnings`,
+            date: '9/09',
             questions: `What is computational poetics? What does it mean to apply computational ingredients to language? What are the poetic opportunities of computation? What are the methods + implications?`,
             img: `<img src="imgs/parrishcrop.png" class="imageCaption"><br>Allison Parrish, Compass Poems`,
             inClass:
@@ -101,18 +110,19 @@
                 Talk about Re-indexing: Tuck & Yang: <a href="https://clas.osu.edu/sites/clas.osu.edu/files/Tuck%20and%20Yang%202012%20Decolonization%20is%20not%20a%20metaphor.pdf" target="_blank">Decolonization is not a metaphor</a> (p1–p13) ✿
                 <a href="https://cyberfeminismindex.com/" target="_blank">Cyberfeminism Index</a>`
             ,
-            reading: `
-              Legacy Russell ✻ <a href="http://kaaathy.com/risd-cp-2021/class-materials/books/Glitch_Feminism_01_02.pdf" target="_blank">Glitch Feminism</a> Intro & Ch. 1. <a href="https://docs.google.com/document/d/1dFPrSmi1s4tLMM8--hxzTnpjBkQqx9rgKFYAl83gPHg/edit" target="_blank">(Annotatable version)</a>.`
+            forNext: `
+              Legacy Russell ✻ <a href="http://kaaathy.com/risd-cp-2021/class-materials/books/Glitch_Feminism_01_02.pdf" target="_blank">Glitch Feminism</a> Intro & Ch. 1. <a href="https://docs.google.com/document/d/1dFPrSmi1s4tLMM8--hxzTnpjBkQqx9rgKFYAl83gPHg/edit" target="_blank">(Annotatable version)</a>.
+        <br><br>Do ${projects[0].project}: ${projects[0].name}.`
           },
           {
             shown: false,
             theme: "Glitching & Rewriting",
+            date: `9/16`,
             questions: `How does the history of computational tools influence our present practice? Where do the roots show up? Who are we in dialogue with when we do this work, and where might our tools betray our creators?`,
             img: `<img src="imgs/gooey.jpg" class="imageCaption"><br>American Artist, BLACK GOOEY UNIVERSE`,
             inClass: `
               Discuss readings: What roots do we want to take with us? To betray or sever? ✿ What futures do we want to incubate? ✿ What are binaries or taxonomies we want to resist?
               Have a potluck~
-              Discuss next 3 weeks: Methodologies
               <br><br>
               Look at:
               <a href="https://en.wikipedia.org/wiki/Non-English-based_programming_languages" target="_blank">Non-English-based programming languages</a> ✿ Cyberfeminism Index ✿
@@ -123,28 +133,28 @@
               Nabil Hassein <a href="https://nabilhassein.github.io/blog/generative-DOOM/" target="_blank">generative-DOOM</a>
               <br><br><span class="note">Code Workshop</span> Intro to HTML/CSS/javascript. How to debug, make mischief in inspector, and use the console.</span>
               `,
-            reading: `Ron Padgett ✻ <a href="https://files.eric.ed.gov/fulltext/ED404618.pdf" target="_blank">Creative Reading: What It Is, How To Do It</a> p70–123.
-              <br>Try one of the reading techniques outlined here and post the visual output to the Discord.`,
-            project: `Create something responding to the prompt ${projects[1].name} </li>
+            forNext: `Ron Padgett ✻ <a href="https://files.eric.ed.gov/fulltext/ED404618.pdf" target="_blank">Creative Reading: What It Is, How To Do It</a> p70–123.
+              <br>Try one of the reading techniques outlined here and post the visual output to the Discord. <br><br>
+              Create something responding to ${projects[1].project}: ${projects[1].name} </li>
               `,
           },
           {
             shown: false,
             theme: "Randomness, Chance, Oracles",
+            date: '9/23',
             questions: `When inviting chance as an ingredient or collaborator, what fractalline futures are possible? How does statistical randomness become a metaphor?`,
             img: `<img src="imgs/merrill_ouija.jpg" class="imageCaption"><br>James Merrill's homemade Ouija board`,
             inClass: `Look at: Lillian-Yvonne Bertram <a href="http://www.noemipress.org/catalog/poetry/travesty-generator/" target="_blank">Travesty Generator</a>, James Merrill's <a href="https://yalealumnimagazine.com/articles/3363" target="_blank">Ouija Board</a>, Kimiko Hahn on <a href="https://bombmagazine.org/articles/kimiko-hahn/" target="_blank">Zuihitsu</a>, or “running brush,” and cultivating randomness
               <br><br><span class="note">Code Workshop</span> Introduction to Glitch.com. Start to play with <a href=
               https://docs.google.com/document/d/1606Vq_ELeQ6d4PIADPZ3jifnsoMl8jUu_Srvody0A5A/edit#heading=h.biazm6nhdt7x
               target="_blank">conditional statements</a> and randomization</span>`,
-            // You can adapt the score you wrote in class 3. Rewrite a list of new parameters: nouns, verbs, etc.
-
-            reading: `Wendy Chun on Code as Law  ✻ <a href="https://observatory.constantvzw.org/books/wendy-hui-kyong-chun-programmed-visions-software-and-memory.pdf" target="_blank">Programmed Visions Software & Memory</a>. 40-56 in the PDF pages, 25–41 in the book pages. <a href="https://docs.google.com/document/d/1dlw1lNptELpjx-dupwXjdU_lzRpUdDxqFrOxIZ2l3Zk/edit#" target="_blank">(Annotatable version).</a>`,
-            project: `Start ${projects[2].project}: ${projects[2].name}`
+            forNext: `Wendy Chun on Code as Law  ✻ <a href="https://observatory.constantvzw.org/books/wendy-hui-kyong-chun-programmed-visions-software-and-memory.pdf" target="_blank">Programmed Visions Software & Memory</a>. 40-56 in the PDF pages, 25–41 in the book pages. <a href="https://docs.google.com/document/d/1dlw1lNptELpjx-dupwXjdU_lzRpUdDxqFrOxIZ2l3Zk/edit#" target="_blank">(Annotatable version).</a> <br><br>
+            <br><br>Start ${projects[3].project}: ${projects[3].name}`
           },
           {
             shown: false,
             theme: "Functions, Scores, Rituals",
+            date: '9/30',
             questions: `In what way can we use “programming” as a metaphor to understand the mechanics of our own behaviors individually and at scale?
               <br><br>What scores do we read, what scores do we write? How does context affect the nature of score?
               `,
@@ -153,41 +163,41 @@
               Write a score which describes a ritual
               Text + bodies + scores exercise (inspired by Kameelah Rasheed). Afterwards, write a new score for reading
               <br><br><span class="note">Code Workshop</span> Building on last week, we'll create a <a href="https://docs.google.com/document/d/1606Vq_ELeQ6d4PIADPZ3jifnsoMl8jUu_Srvody0A5A/edit#heading=h.2c8c0zvbxdrm" target="_blank">simple HTML website</a> which will show random text</span>`,
-            reading: `n/a`
+            forNext: `No reading. Iterate on last week's work.`
           },
+
 
           {
             shown: false,
-            theme: "Order, Sort, Repeat (Concrete)",
-            questions: `Some artists and poets define poetry as visual and auditory ways in which linguistic similarities are highlighted and heightened. How does the use of looping, sorting, and constraining language produce poetics?`,
-            img: `<img src="imgs/jb.png" class="imageCaption"><br>Jen Bervin, Draft Notation`,
-            inClass: `Draw from a corpus. See what happens if you delete certain words and repeat others
-                Come up with a rule: Don’t read any word which has the letter e. Don’t read any word longer than 4 letters. If you And so on.
-                We will read these aloud in class.
-                Look at: Kiki Bouba, Allison Parrish ✿
-                <a href="https://www.serpentinegalleries.org/art-and-ideas/the-umbra-of-an-imago-writing-under-control-of-machine-learning/" target="_blank">The umbra of an imago: Writing under control of machine learning</a>
-                <a href="https://drive.google.com/file/u/2/d/1yaUxwGOKxhiu8cq798yVUCbSh3nix_jh/view?usp=sharing" target="_blank">Autosummarize Excerpts</a>
-                Christan Bok DNA + Eunoia ✿
-                Anthology: <a href="https://airlightmagazine.org/etc/podcasts/language-is-failing-us-monica-de-la-torre-and-alex-balgiu-on-women-in-concrete-poetry-1959-1979-air-light-podcast-3/" target="_blank">Women in Concrete Poetry 1959-1979</a>`,
-            reading: `n/a
-              `
-          },
-          {
-            shown: false,
             theme: "Collective Hypertext",
+            date: '10/07',
             questions: `What does non-linear readership offer? What influence does a reader have over their own path? What about a text which is made of many texts, and many places? How do you read the internet?
               <br><br>
               Where in your practice do you produce language with others? How is authorship distributed?`,
             img: `<img src="imgs/patchwork.png" class="imageCaption"><br>Shelley Jackson, Patchwork Girl`,
-            inClass: `Spend all of class today in a google doc. We will read the final output. Each person should add at least one hyperlink.
+            inClass: `Look at:
               Jillian Weise ✻ <a href="https://granta.com/common-cyborg/" target="_blank">Common Cyborg</a>
               Katy Gero ✻ <a href="https://shecancode.io/blog/why-siri-sounds-like-a-girl-but-says-she-is-beyond-gender" target="_blank">Why Siri Sounds Like A Girl, But Says She Is Beyond Gender</a>
               <br><br><span class="note">Optional Code Workshop</span> We will do an <a href="https://docs.google.com/document/d/1606Vq_ELeQ6d4PIADPZ3jifnsoMl8jUu_Srvody0A5A/edit#heading=h.6nrk4jj4sswg" target="_blank">introduction of RiTa.js</a>, with an emphasis on exploration. We'll play with a simple Markov chain project.`,
-            reading: `Eunsong Kim ✻ <a href="http://www.scapegoatjournal.org/docs/09/Eunsong%20KIM,%20Found,%20Found,%20Found_%20Lived,%20Lived,%20Lived.pdf" target="_blank">Found Found Found Lived Lived Lived</a>. <a href="https://docs.google.com/document/d/1ygchP_N7GI1oh_CbkdP4gdoLX12G0g9I3EpyOJD5TU0/edit" target="_blank">(Annotatable version).</a></li>`
+            forNext: `Eunsong Kim ✻ <a href="http://www.scapegoatjournal.org/docs/09/Eunsong%20KIM,%20Found,%20Found,%20Found_%20Lived,%20Lived,%20Lived.pdf" target="_blank">Found Found Found Lived Lived Lived</a>. <a href="https://docs.google.com/document/d/1ygchP_N7GI1oh_CbkdP4gdoLX12G0g9I3EpyOJD5TU0/edit" target="_blank">(Annotatable version).</a></li>
+            <br><br> Complete work on project 1.`
+          },
+          {
+            shown: false,
+            theme: "Scaling Down",
+            date: `<span class="alert">project 1 due</span> 
+            
+            10/21 `,
+            questions: `TBD`,
+            img: ``,
+            inClass: `Do the exercise ${projects[2].project}: ${projects[2].name} in class.`,
+            forNext: `Allison Parrish ✻ <a href="https://posts.decontextualize.com/language-models-ransom-notes/" target="_blank">Language Models Can Only Write Ransom Notes</a>
+            <br>Begin ${projects[4].project}: ${projects[4].name}`
           },
           {
             shown: false,
             theme: "Interface + Embodiment",
+            date: '<span class="alert" style="background:pink!important">k out</span> 10/28 ',
             questions: `If I am an AI voice-controlled interface, how does my appearance and identity render the language I offer?`,
             img: `<img src="imgs/mccarthy.jpg" class="imageCaption"><br>Lauren McCarthy, Social Turkers`,
             inClass: `Look at: <a href="https://docs.google.com/document/d/15oSMuDX5OnYaJ6ZTe5QVTC2fB7kE-EDY5wPQMmD-3BA/edit" target="_blank">Alt-Text as Poetry Workbook</a> ✿ Skawennati + Second Life ✿ Excerpt from Disability Visibility ✿ Ian Hatcher ✿ Cunnilingus in North Korea
@@ -195,12 +205,12 @@
               <br><br><span class="note">Exercise</span> Transcribe a piece of language for an hour. Note which decisions you make. We'll discuss in class the physical experience of transcription.
               <br><br><span class="note">Optional Code Workshop</span> We'll continue playing with some examples from RiTa.js. We'll explore rhyming and random words, and <a href="https://docs.google.com/document/d/1606Vq_ELeQ6d4PIADPZ3jifnsoMl8jUu_Srvody0A5A/edit#heading=h.6nrk4jj4sswg" target="_blank">create a simple rhyming project.</a>
               `,
-            reading: `Excerpts from Empire of AI, by Karen Hao`
+            forNext: `Excerpts from Empire of AI, by Karen Hao. <br> Continue project work.`
           },
           {
             shown: false,
             theme: "Body + Corpus",
-            due: ``,
+            date: '11/04',
             questions: `What is our relationship to the original corpus? Parrish describes corpus as necromancy — how do acts of translation, transformation, recontextualization interact with corpus? Is it reverent, caring, exhuming, violent?`,
             img: `<img src="imgs/zong.png" class="imageCaption"><br>M. NourbeSe Phillip, Zong!`,
             inClass: `<span class="note">Extra</span>
@@ -208,12 +218,13 @@
               Leonard Richardson ✻ <a href="https://www.crummy.com/2013/11/27/0" target="_blank">Bots Should Punch Up</a>
               Brendan Byrne ✻ <a href="https://rhizome.org/editorial/2018/jul/10/an-excess-of-consciousness-1/" target="_blank">An Excess of Consciousness</a>
             `,
-            reading: `Kate Crawford ✻ <a href="https://www.excavating.ai/" target="_blank">Excavating AI</a>. <a href="https://docs.google.com/document/d/1sYa5sx8TQJp19yDCA7ZJWqK7kgOh83KYRp-94PMpCUA/edit" target="_blank">(Annotatable version)</a>
-              <br>Nabil Hassein ✻ <a href="https://digitaltalkingdrum.com/2017/08/15/against-black-inclusion-in-facial-recognition/" target="_blank">Against Black Inclusion in Facial Recognition</a> <a href="https://docs.google.com/document/d/12mu4IZvdEFCs01bd_utPbwQM5fw8fc1CNnbzjj2qDcY/edit" target="_blank">(Annotatable version).</a>`          	},
+            forNext: `Kate Crawford ✻ <a href="https://www.excavating.ai/" target="_blank">Excavating AI</a>. <a href="https://docs.google.com/document/d/1sYa5sx8TQJp19yDCA7ZJWqK7kgOh83KYRp-94PMpCUA/edit" target="_blank">(Annotatable version)</a>
+              <br>Nabil Hassein ✻ <a href="https://digitaltalkingdrum.com/2017/08/15/against-black-inclusion-in-facial-recognition/" target="_blank">Against Black Inclusion in Facial Recognition</a> <a href="https://docs.google.com/document/d/12mu4IZvdEFCs01bd_utPbwQM5fw8fc1CNnbzjj2qDcY/edit" target="_blank">(Annotatable version).</a>
+              <br><br> Complete project 2.`          	},
           {
             shown: false,
             theme: "Corpus Consciousness, Shell Ghosts",
-            due: `${projects[3].project} Due`,
+            date: `<span class="alert">project 2 due</span> 11/11 `,
             questions: `Ghost in the shell: Who takes responsibility when a bot writes problematics? Who gets to make machines that write for another, especially when they no longer exist? What does their presence teach us, how might they haunt us?`,
             img: `<img src="imgs/dinkinsbina.png" class="imageCaption"><br>Stephanie Dinkins meets Bina48`,
             inClass: `
@@ -221,11 +232,12 @@
               <br><span class="note">Optional</span> Play with <a href="https://cheapbotsdonequick.com/" target="_blank">Cheap Bots, Done Quick!</a>
               `,
 
-            reading: `n/a`
+            forNext: `No reading. Begin ${projects[5].project}: ${projects[5].name}`
           },
           {
             shown: false,
             theme: "Data + Classifier",
+            date: '11/18',
             questions: `What happens to information within taxonomies and names? What about information without? What are missing data sets and corpuses we might start to build? What do we gain and lose with classification?`,
             img: `<img src="imgs/mimi.jpg" class="imageCaption"><br>Mimi Onuoha, Library of Missing Data Sets`,
             inClass: `
@@ -235,12 +247,12 @@
               Look at:
               <a href="https://drive.google.com/file/d/1sOHH3EPPBXsreoKBSHO_QIbLH86BjGAi/view?usp=sharing" target="_blank">Reading Like a Computer</a>
               <br><br><span class="note">Optional</span> <a href ="https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists-v/info" target="_blank">What is Machine Learning?</a> — R Fiebrink (Lecture 2-3)</span>`,
-            reading: `n/a`,
-            project: `Continue ${projects[5].project}: ${projects[5].name}`,
+            forNext: `No reading. Continue project work.`
           },
           {
             shown: false,
             theme: "Read Me, Read Me Not",
+            date: '11/25',
             questions: `Within forces of classification, where might we situate ourselves? Where might we want to be read, versus where might we want our true meaning to be obfuscated or opaque? `,
             img: `<img src="imgs/thunderclap.jpg" class="imageCaption"><br>Amy Suo Wu, Thunderclap`,
             inClass: `
@@ -252,12 +264,12 @@
               <a href="https://www.youtube.com/watch?v=wKx1aenJK08&ab_channel=skippybentley" target="_blank">Cao Ni Ma</a> ✿
               <a href="http://www.amysuowu.net/content/thunderclap" target="_blank">Amy Suo Wu Thunderclap</a>
 `,
-            reading: `n/a`,
-            project: `Finish project 4`,
+            forNext: `No reading. Work on project 3`
           },
           {
             shown: false,
             theme: `Show Your Work`,
+            date: '12/02',
             questions: `What is the marketplace for those who classify as labor? Whose work do we appropriate? Who is classified as artist, writer, laborer, machine?`,
             img: `<img src="imgs/lacework.png" class="imageCaption"><br>Everest Pipkin, Lacework`,
             inClass: `
@@ -275,8 +287,16 @@
                 Anne Boyer ✻ <a href="https://www.poetryfoundation.org/poems/58316/not-writing" target="_blank">Not Writing</a> (also,
                   <a href="https://drive.google.com/file/d/1ZCmT4r2vy58qEtvEFRo-S_-8XZnStVyY/view?usp=sharing"target="_blank">What is Not Writing?</a>
 `,
-            reading: `No reading.`,
-            project: `Have a good winter break :)`,
+            forNext: `No reading. Finish project 3!`
+          },
+          {
+            shown: false,
+            theme: `End`,
+            date: `<span class="alert">project 3 due</span> 12/09`,
+            questions: ``,
+            img: ``,
+            inClass: `Crits`,
+            forNext: `Have a great break~`
           }
         ]
       }

@@ -1,10 +1,10 @@
 export default
-[ {
-  shown:false,
-  date:"Due 9/16",
-  project:"Exercise A",
-  name:"Computational Histories Potluck",
-  content:`
+  [{
+    shown: false,
+    date: "Due 9/16",
+    project: "Exercise A",
+    name: "Computational Histories Potluck",
+    content: `
   Decide on a short research topic to share with the class next week, relating to the history of computers, society, from a lens of resistance— decolonial, anti-surveillance, intersectionally feminist, all of the above...
   <br><br>
   <img src="imgs/abtec.jpg" class="imageCaption"><br><span class="imageCaption">ABTEC Island, Skawennati</span>
@@ -18,11 +18,11 @@ export default
   `
   },
   {
-    shown:false,
-    date:"Due 9/23",
-    project:"Exercise B",
-    name:"Gliiitch",
-    content:`Legacy Russell describes the glitch as “an error, a mistake, a failure to function,” celebrated as “a vehicle of refusal, a strategy of non-performance.” How might these principles and ideas enter our work this semester?
+    shown: false,
+    date: "Due 9/23",
+    project: "Exercise B",
+    name: "Gliiitch",
+    content: `Legacy Russell describes the glitch as “an error, a mistake, a failure to function,” celebrated as “a vehicle of refusal, a strategy of non-performance.” How might these principles and ideas enter our work this semester?
 <br><br>
 <img src="imgs/rosamenkman.png" class="imageCaption"><br><span class="imageCaption">Detail of glitch art by Rosa Menkman, 2011</span><br><br>
 
@@ -34,35 +34,23 @@ To share your project, create a website which hosts your response as embedded im
 Post your glitches in the Discord #projects channel.
 
     `
-    },
+  },
 
-    {
-      shown:false,
-      date:"In Class",
-      project:"Exercise C",
-      name:"Transcription",
-      content:`
-      Transcribe 250-500 words of any text. It must be done by you, manually. This project is less about form and more about experience + process.
-      <br>
-      <br>
-      <img src="imgs/Bruno-Leyval.jpg" class="imageCaption"><br><span class="imageCaption">Automatic Writing, Bruno Leyval</span>
-      <br><br>
-      Consider your source text:
-      <li>Is it already presented as digital, parsable text?
-      <li>Is it archived as a printed or written object (or otherwise not-presently machine readable)?
-      <li>How spatial is it? (e.g. a set of unrelated receipts on the table, a set of street names)
-      <br>
-      <br>
-
-      In a few sentences in the Discord, articulate how transcription feels as a method of transformation. Note the bodily and mental experience of translation. Note the decisions you make when you are translating it. In which ways does it feel neutral, or opinionated?
-    `
-    },
-{
-		shown:false,
-    date:"Due 10/14",
-		project:"Project 1",
-    name:"Dice in the Browser",
-		content:`
+  {
+    shown: false,
+    date: "In Class",
+    project: "Exercise C",
+    name: "Against Scale",
+    content: `
+      We will create a collective small-scale data set. Each person should find 3,000–5,000 words of text which should be "ethically sourced." In class, we will put them all in one document and, in pairs, either write code or write set of rules to create something visual using some or all of the collective corpus.
+        `
+  },
+  {
+    shown: false,
+    date: "Due 10/21",
+    project: "Project 1",
+    name: "Dice in the Browser",
+    content: `
     Create a text-based browser project which uses variability and randomness in some way. This project will build on our in-class knowledge of HTML, CSS, and javascript.
     <br><br>
     <img src="imgs/troika.png" class="imageCaption"><br><span class="imageCaption">Troika, Calculating the Universe, 2014</span><br><br>
@@ -77,18 +65,18 @@ Post your glitches in the Discord #projects channel.
     <br><br>
     To consider: How do computational ingredients affect the nature of the text? How does the literal and metaphorical concepts of randomness, repetition, score transform the text’s meaning?
     `
-	},
-	{
-		shown:false,
-    date:"Due 11/04",
-		project:"Project 2",
-    name:"Embodied Voice(s)",
-		content:`
+  },
+  {
+    shown: false,
+    date: "Due 11/11",
+    project: "Project 2",
+    name: "Embodied Voice(s)",
+    content: `
     Create a project which brings together two or more authors (one of them can be you). This project might touch on themes of hypertext, collective writing, or authorship and found text as writing. It might touch on feedback loops and crowdsourcing. Perhaps writing becomes something of a collage. This project:
     <br>
     <br>
     <li>Must draw a relationship between two or more pieces of text by different authors (one of them can be you)
-    <li>Must be performed for the class over zoom (or you can share a recording of the performance)
+    <li>Must be performed for the class
     <li>Can use any medium of language expression: text, audio based, etc. Will you perform it? Will you use a voice interface other than yourself? Will it be silent?
     <br>
     <br>
@@ -96,14 +84,14 @@ Post your glitches in the Discord #projects channel.
     <b>To consider:</b> How does the embodiment of the text shift the relationship between the original text(s)? Will you reveal difference between all/both voices, or channel through a disambiguating singular body?
     `
 
-	},
+  },
 
-	{
-		shown:false,
-    date:"Due 12/02",
-		project:"Project 3",
-    name:"New Data Sets",
-		content:`Building off themes and questions of legibility and classification in this course, your final project is to either:
+  {
+    shown: false,
+    date: "Due 12/09",
+    project: "Project 3",
+    name: "New Data Sets",
+    content: `Building off themes and questions of legibility and classification in this course, your final project is to either:
     <li> define and publish a new dataset
     <li> publish an existing dataset in a new way
     <br><br>
@@ -125,6 +113,6 @@ Post your glitches in the Discord #projects channel.
     <br><br>
     Focus on the process of data collection in your reflections. You should bring 40 total items to class. If they are something intangible, like hyperlinks, print out a tangible representation of it, such as a website.
     `
-	},
+  },
 
-]
+  ]

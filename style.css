@@ -14,6 +14,17 @@
 
 /*———————————————GLOBAL STYLES———————————————*/
 
+.date {
+  font-size: 11px;
+}
+
+.alert {
+  background: lime;
+  padding: 4px 4px 2px 4px;
+  color: black;
+  text-transform: uppercase;
+}
+
 
 body {
   margin: 20px 0px 40px 40px;
@@ -90,9 +101,9 @@ body {
 
 .item {
   display: flex;
-  justify-content: flex-start;
   align-items: baseline;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .item-heading {
@@ -132,11 +143,19 @@ li {
   border-radius: 8px;
   font-size: 16px;
   cursor: help;
-
+  background: mediumorchid;
+  color: white;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
   flex-wrap: wrap;
+
+}
+
+.reading:hover {
+  background: white;
+  color: mediumorchid !important;
+  transition: all 0.25s ease;
 
 }
 
