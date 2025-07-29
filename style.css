@@ -142,18 +142,18 @@ li {
 
 
 .reading-title {
-  font-weight: normal;
-  font-family: 'Authentic Sans', 'Arial', sans-serif;
+  font-family: 'Hershey', 'courier prime', monospace;
   letter-spacing: 0px;
   font-size: 14pt;
-  padding-top: 16px;
+  padding-top: 4px;
 }
 
 .reading-subtitle {
   font-weight: normal;
-  font-family: 'Hershey', 'courier prime', monospace;
-  letter-spacing: 0px;
+  font-family: 'authentic sans';
+  letter-spacing: 1px;
   font-size: 10pt;
+  padding-top: 16px;
 }
 
 
