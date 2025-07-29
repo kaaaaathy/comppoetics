@@ -3,9 +3,10 @@
 	"about": "computational poetics",
 	"menu": {
 		"✻ Computational Poetics ✻": "info.html",
-		"Syllabus": "syllabus.html",
+		"Syllabus": "https://docs.google.com/document/d/1JBR-JP8X7oj6yfvee0hv5pERIOeAuleY2XNKPJebQTk/edit?tab=t.0#heading=h.ko4wyrj93kpc",
 		"Projects": "projects.html",
 		"Topics": "topics.html",
-		"Readings": "readings.html"
+		"Readings": "readings.html",
+		"Code Workshops": "https://docs.google.com/document/d/1W2HVxvRQzgsXho1mVz-E9_0H0DeyYJcHb_e5hq_HlDc/edit?usp=sharing"
 	}
 }
