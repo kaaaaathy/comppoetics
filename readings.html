@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <h2>Readings</h2>
+        These are all the links + PDFs to readings this semester. Please don't worry too much about the size of the
+        readings
+        or list; we will largely be reading excerpts of texts, not complete books. Also refer to the schedule to see
+        which
+        ones are required vs. recommended.
+    </div>
+
+    <div id="reading-container">
+        <div class="reading" v-for="(text,index) in texts">
+            <a :href="text.link" style="border:none !important" target="_blank">
+
+                <div class="reading-title">{{text.title}}</div>
+                <div class="reading-subtitle">{{text.author}}</div>
+            </a>
+        </div>
+
+        <!-- end row element -->
+
+    </div>
+
+    <script type="module">
+
+        new Vue({
+            el: "#reading-container",
+            data: {
+                texts: [
+                    {
+                        title: `In The Beginning Was The Word And The Word Was Embodied`,
+                        author: `David Robson`,
+                        link: `https://aeon.co/essays/in-the-beginning-was-the-word-and-the-word-was-embodied`
+                    },
+                    {
+                        title: `Task of the Translator`,
+                        author: `Walter Benjamin`,
+                        link: `https://drive.google.com/file/d/1v9B8Q4EJF0gdio-zj6KDPIImO-Hpm2QU/view?usp=drive_link`
+                    },
+                    {
+                        title: `Say Translation is Art`,
+                        author: `Sawako Nakayasu`,
+                        link: `https://drive.google.com/file/d/1yTHvzTwsFSkegITSDgxhbWRhVPdId2qj/view?usp=drive_link`
+                    },
+                    {
+                        title: `Glitch Feminism`,
+                        author: `Legacy Russell`,
+                        link: `https://drive.google.com/file/d/1kcGVQaQa2S_9UDnkoREexLYXraC0mmU1/view?usp=sharing`
+                    }
+
+                ]
+            }
+
+        })
+
+
+    </script>
+</body>
+
+</html>

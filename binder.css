@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+@font-face {
+  font-family: Hershey;
+  src: url(fonts/Hershey-Noailles-futuram.ttf);
+}
+
+
 /*———————————————BINDER STYLES———————————————*/
 #logo {
   position: fixed;
@@ -36,7 +42,7 @@
   background-color: mediumorchid;
   color: white;
   font-size: 14px;
-  font-family: 'Courier Prime', 'Courier', monospace;
+  font-family: 'Hershey', 'Courier Prime', 'Courier', monospace;
   position: fixed;
   top: 0px;
   left: 0px;

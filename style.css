@@ -2,8 +2,14 @@
 
 @font-face {
   font-family: Authentic;
-  src: url(authentic-woff/AUTHENTICSans-90.woff);
+  src: url(fonts/AUTHENTICSans-90.woff);
 }
+
+@font-face {
+  font-family: Hershey;
+  src: url(fonts/Hershey-Noailles-futuram.ttf);
+}
+
 
 
 /*———————————————GLOBAL STYLES———————————————*/
@@ -12,9 +18,7 @@
 body {
   margin: 20px 0px 40px 40px;
   font-weight: normal;
-  /* font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 30px; */
+
   font-family: "Authentic", Arial, sans-serif;
   font-size: 14px;
   line-height: 26px;
@@ -93,7 +97,7 @@ body {
 
 .item-heading {
   font-weight: normal;
-  font-family: 'courier prime';
+  font-family: 'Hershey', 'courier prime', monospace;
   letter-spacing: 0px;
   font-size: 20px;
   padding: 16px 0px;
@@ -101,6 +105,55 @@ body {
 
 li {
   hanging-punctuation: first;
+}
+
+#reading-container {
+  padding-top: 20px;
+  display: flex;
+  overflow: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  margin-bottom: 100px;
+  max-width: 720px;
+  letter-spacing: 0.5px;
+
+}
+
+
+
+.reading {
+  width: 160px;
+  height: 220px;
+  border: 1px solid white;
+  padding: 10px 20px;
+  margin: 0px 20px 20px 0px;
+  transition: all 0.25s ease;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: help;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+}
+
+
+.reading-title {
+  font-weight: normal;
+  font-family: 'Authentic Sans', 'Arial', sans-serif;
+  letter-spacing: 0px;
+  font-size: 14pt;
+  padding-top: 16px;
+}
+
+.reading-subtitle {
+  font-weight: normal;
+  font-family: 'Hershey', 'courier prime', monospace;
+  letter-spacing: 0px;
+  font-size: 10pt;
 }
 
 
@@ -113,7 +166,7 @@ li {
 .button {
   font-size: 14px;
   line-height: 20px;
-  font-family: 'Courier Prime', 'Courier', monospace;
+  font-family: 'Hershey', 'courier prime', monospace;
   text-transform: uppercase;
   background: mediumorchid;
   border: 1px solid white;
@@ -187,7 +240,7 @@ h1 {
   font-weight: normal;
   font-size: 32px;
   line-height: 40px;
-  font-family: 'courier prime';
+  font-family: 'Hershey', 'courier prime', monospace;
   letter-spacing: 0px;
 
 }
@@ -195,11 +248,14 @@ h1 {
 h2 {
   font-weight: normal;
   font-size: 20px;
+  letter-spacing: -0.25px;
+  font-family: 'Hershey', 'courier prime', monospace;
+
 
 }
 
 h3 {
-  font-family: 'Courier Prime', 'Courier', monospace;
+  font-family: 'Hershey', 'courier prime', 'Courier', monospace;
   font-size: 14px;
   font-weight: normal;
   padding-top: 20px;
@@ -208,7 +264,7 @@ h3 {
 }
 
 .small {
-  font-family: 'courier prime', 'courier', monospace;
+  font-family: 'Hershey', 'courier prime', 'courier', monospace;
   font-size: 14px;
 
 }
@@ -216,13 +272,13 @@ h3 {
 /* FONT SPAN styles */
 
 .note {
-  font-family: 'Courier Prime', 'Courier', monospace;
+  font-family: 'Hershey', 'Courier Prime', 'Courier', monospace;
   font-size: 14px;
   text-transform: uppercase;
 }
 
 .imageCaption {
-  font-family: 'Courier Prime', 'Courier', monospace;
+  font-family: 'Hershey', 'Courier Prime', 'Courier', monospace;
   font-size: 12px;
   font-style: italic;
   max-width: 400px;
@@ -242,11 +298,6 @@ h3 {
   cursor: help;
 }
 
-/* @media only screen and (max-width: 960px) {
-  body {
-    margin: 20px 40px;
-  }
-} */
 @media only screen and (max-width: 768px) {
   body {
     margin: 0px 20px;
