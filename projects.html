@@ -1,63 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 
-</style>
+  </style>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
 </head>
+
 <body>
 
-<div class="header">
-  <h2>Projects</h2>
-  <p>Projects are 3-weeks long and require written reflections; exercises are 1-week long.
-</div>
+  <div class="header">
+    <h2>Projects</h2>
+    <p>Projects are 3-weeks long and require written reflections; exercises are 1-week long.
+  </div>
 
-<div id="container">
+  <div id="container">
 
-<div class = "row" v-for="(project,index) in projects">
-    <div class = "item" @click="project.shown = !project.shown">
-      <!-- <div class ="due">{{project.date}}</div> -->
-      <div class ="item-project">{{project.project}} &nbsp;&nbsp;&nbsp;</div>
-      <div class ="item-heading">{{project.name}}</div>
+    <div class="row" v-for="(project,index) in projects">
+      <div class="item" @click="project.shown = !project.shown">
+        <!-- <div class ="due">{{project.date}}</div> -->
+        <div class="item-project">{{project.project}} &nbsp;&nbsp;&nbsp;</div>
+        <div class="item-heading">{{project.name}}</div>
+      </div>
+
+      <!-- <div class="caret">X</div> -->
+
+      <!-- hidden content starts here -->
+      <div class="contents" v-if="project.shown==true">
+        <div v-html="project.content"></div>
+
+      </div>
     </div>
+    <!-- end row element -->
 
-    <!-- <div class="caret">X</div> -->
+  </div>
 
-    <!-- hidden content starts here -->
-    <div class = "contents" v-if="project.shown==true">
-      <div v-html="project.content"></div>
-
-    </div>
-</div>
-<!-- end row element -->
-
-</div>
-
-<p>Detailed briefs →
-    <a class="button" target="_blank" href="https://docs.google.com/document/d/1thIVWNhchE5vzYBfXO5U7Fejkb7_B8PewTFZo6svmRY/">
+  <p>Detailed briefs →
+    <a class="button" target="_blank"
+      href="https://docs.google.com/document/d/1thIVWNhchE5vzYBfXO5U7Fejkb7_B8PewTFZo6svmRY/">
       Google Doc</a>
-<!-- end container element -->
+    <!-- end container element -->
 
 
 
-<script type = "module">
+    <script type="module">
 
-import projects from "./projects.js";
-
-
-new Vue({
-    el: "#container",
-    data: {
-      projects
-    }
-  })
+      import projects from "./projects.js";
 
 
-</script>
+      new Vue({
+        el: "#container",
+        data: {
+          projects
+        }
+      })
+
+
+    </script>
 
 </body>
+
 </html>

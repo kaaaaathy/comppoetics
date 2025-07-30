@@ -9,7 +9,7 @@ export default
   <br><br>
   <img src="imgs/abtec.jpg" class="imageCaption"><br><span class="imageCaption">ABTEC Island, Skawennati</span>
   <br><br>
-  Bring at least 1 historical reference—for instance, the invention of the jacquard loom and its effect on labor. How women in World Wars encoded secret knit messages into sweaters. Or QuiPu as an indigineous mode of data storage.
+  Bring at least 1 historical reference—for instance, the invention of the jacquard loom and its effect on labor. How women in World Wars encoded secret knit messages into sweaters. Or QuiPu as an indigeneous mode of data storage.
   <br><br>
   Share also 2-3 examples of contemporary computational artworks which aligns with your theme.This can be projects, writings, initiatives from artists, advocates, policy makers working recently. For instance, anti-surveillance workshops or browser extensions, or sex worker demands to sell sex on the internet.
   <br><br>
@@ -42,7 +42,7 @@ Post your glitches in the Discord #projects channel.
     project: "Exercise C",
     name: "Against Scale",
     content: `
-      We will create a collective small-scale data set. Each person should find 3,000–5,000 words of text which should be "ethically sourced." In class, we will put them all in one document and, in pairs, either write code or write set of rules to create something visual using some or all of the collective corpus.
+      We will create a collective small-scale data set. Each person should find 3,000–5,000 words of text which should be "ethically sourced." In class, we will put them all in one document and, in pairs, either write code or write a set of rules to create something visual using some or all of the collective corpus.
         `
   },
   {
