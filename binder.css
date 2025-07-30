@@ -20,7 +20,7 @@
 #binder {
   margin: 0px;
   user-select: none;
-  background-color: mediumorchid;
+  background-color: darkorchid;
 }
 
 #background-site iframe {
@@ -39,7 +39,7 @@
 }
 
 #menu {
-  background-color: mediumorchid;
+  background-color: darkorchid;
   color: white;
   font-size: 14px;
   font-family: 'Hershey', 'Courier Prime', 'Courier', monospace;
@@ -125,7 +125,7 @@ li {
     /* padding-left: 500px; */
     width: auto;
     display: none;
-    background: mediumorchid;
+    background: darkorchid;
     margin: 0px;
     padding: 16px 20px !important;
     border-top: 1px solid white;
