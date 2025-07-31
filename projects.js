@@ -42,7 +42,7 @@ Post your glitches in the Discord #projects channel.
     project: "Exercise C",
     name: "Against Scale",
     content: `
-      We will create a collective small-scale data set. Each person should find 3,000–5,000 words of text which should be "ethically sourced." In class, we will put them all in one document and, in pairs, either write code or write a set of rules to create something visual using some or all of the collective corpus.
+      Inspired by Allison Parrish's artistic and pedagogical practice in <a href="https://hsnlp.decontextualize.com/" target="_blank">"human-scale" language models</a>: we will create a collective small-scale data set in class. Each person should find 3,000–5,000 words of text which should be sourced in-line with your values / our class values. In class, we will put them all in one document and, in pairs, either write simple code or write a set of rules to create something visual using some or all of the collective corpus.
         `
   },
   {
