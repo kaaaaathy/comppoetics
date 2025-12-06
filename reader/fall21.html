@@ -1,273 +1,279 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
-<link rel="stylesheet" type="text/css" href="reader.css" media="screen"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="reader.css" media="screen" />
 
 
 </head>
-<body style="overflow-x:hidden">
-<div class="header">
-  <p class = "small">RISD Graphic Design  •  GRAPH-1125</p>
-  <h1>Computational Poetics Reader<br>Fall 2021</h1>
 
-  <!-- <ul>Links <a class ="button" target = "_blank" href="https://docs.google.com/document/d/1xdPg3TvgzILBlLPnW5OKQqiwgfRaISCfeQQSOiVnoMI/edit?usp=sharing">
+<body style="overflow-x:hidden">
+    <div class="header">
+        <p class="small">RISD Graphic Design • GRAPH-1125</p>
+        <h1>Computational Poetics Reader<br>Fall 2021</h1>
+
+        <!-- <ul>Links <a class ="button" target = "_blank" href="https://docs.google.com/document/d/1xdPg3TvgzILBlLPnW5OKQqiwgfRaISCfeQQSOiVnoMI/edit?usp=sharing">
   Student Writing</a>  <a class ="button" target = "_blank" href="https://docs.google.com/document/d/1xtTQAWTcW8n_i1RmMqXKYh9pzZFiFX7ts4g8Sr49YCU/edit">
   Roots + Influences </a><br><br> -->
 
-  <ul>For best results, view projects on Desktop or tablet.
-</div>
-<!-- content -->
-<div id="container" style="border-bottom:1px solid white">
-  <div class ="top-level">
-  <div class="index small"></div>
-  <div class="small">NAME</div>
-  <div class="small">PROJECT</div>
-  <!-- <div>mobile?</div> -->
-  <div></div>
-
-</div>
-
-<div class = "reader-row" v-for="(item,index) in allItems">
-      <div class = "inner-row ta-da"><div class="r-image"><img v-bind:src="item.img"><br><span class="lime" v-if = "item.info">{{item.info}}</span></div>
-
-        <div class="index small"><span class="decoration">✻</span>&nbsp;&nbsp;{{index}}</div>
-      <div style ="padding-right:5px;">{{item.artist}}</div>
-      <div style ="padding-left:5px;" class = "ta-da">{{item.project}}</div>
-
-      <!-- <div class="small">{{item.mobile}}</div> -->
-      <div><a class = "button" v-bind:href="item.url" target="_blank">Read</a></div></div>
+        <ul>For best results, view projects on Desktop or tablet.
     </div>
-</div>
+    <!-- content -->
+    <div id="container" style="border-bottom:1px solid white">
+        <div class="top-level">
+            <div class="index small"></div>
+            <div class="small">NAME</div>
+            <div class="small">PROJECT</div>
+            <!-- <div>mobile?</div> -->
+            <div></div>
 
-<!-- end row element -->
-</div>
-<!-- end container element -->
+        </div>
 
-<!-- flowers -->
-<div id="flowers-field">
-  <div class="flowers-row"></div>
-</div>
+        <div class="reader-row" v-for="(item,index) in allItems">
+            <div class="inner-row ta-da">
+                <div class="r-image"><img v-bind:src="item.img"><br><span class="lime"
+                        v-if="item.info">{{item.info}}</span></div>
 
+                <div class="index small"><span class="decoration">✻</span>&nbsp;&nbsp;{{index}}</div>
+                <div style="padding-right:5px;">{{item.artist}}</div>
+                <div style="padding-left:5px;" class="ta-da">{{item.project}}</div>
 
+                <!-- <div class="small">{{item.mobile}}</div> -->
+                <div><a class="button" v-bind:href="item.url" target="_blank">Read</a></div>
+            </div>
+        </div>
+    </div>
 
-<script src="flowers.js"></script>
+    <!-- end row element -->
+    </div>
+    <!-- end container element -->
 
-
-
-<script type = "module">
-
-
-new Vue({
-    el: "#container",
-    data: {
-      shownitem: 0,
-      allItems: [
-          {
-
-              artist:`Ruby Miller`,
-              project:`Between 2 Hills`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/ruby1.png",
-              url:"https://simplistic-gem-case.glitch.me/"
-          },
-          {
-
-              artist:`Joyce Ho`,
-              project:`Poetics of Interruption`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/poetics_of_interruption.gif",
-              url:"https://poetics-of-interruption.glitch.me/"
-          },
-
-          {
-
-              artist:`Gabby Hoefer`,
-              project:`Many Ways to Reach`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/gabby2.png",
-              url:"https://reachh.glitch.me/"
-          },
-
-          {
-
-              artist:`Carlos Perez-Ruiz`,
-              project:`Adult Friends`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/adultfriends.png",
-              url:"https://adult-friends.glitch.me/"
-          },
-          {
-
-              artist:`Qiyang Peng`,
-              project:`Daily Things`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/Daily_Things.png",
-              url:"https://daily-things.glitch.me/"
-          },
-
-          {
-
-              artist:`Mia Koenig`,
-              project:`Letters to a Loved One 1`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/Letters_Project_1.png",
-              url:"https://messages-to-loved-one.glitch.me/"
-          },
-
-          {
-
-              artist:`Carlos Perez-Ruiz`,
-              project:`Pachinko Record`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/panchikosrecord.png",
-              url:"https://panchikos-record.glitch.me/"
-          },
-          {
-
-              artist:`Mia Koenig`,
-              project:`Letters to a Loved One 2`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/letters_project_2.png",
-              url:"https://book-letters.glitch.me/"
-          },
-          {
-
-              artist:`Qiyang Peng`,
-              project:`Algorithm Geography`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/Algorithm_Geography.png",
-              url:"https://algorithm-geography.glitch.me/"
-          },
-          {
-
-              artist:`Arayla Bakhetbek`,
-              project:`Alice in Browserland`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/arayla2.png",
-              url:"https://alice-in-browserland.glitch.me/"
-          },
+    <!-- flowers -->
+    <div id="flowers-field">
+        <div class="flowers-row"></div>
+    </div>
 
 
-          {
 
-              artist:`Adele Roncey`,
-              project:`Glyphs & (My) Digital Self`,
-              mobile:`no`,
-              info:`Visual conversation between Instagram's algorithm, Marina Esmeraldo's "Breaking Free from the Feed" and my own writing and thoughts on creativity and social media.`,
-              img:"fall21/adele2.png",
-              url:"https://www.are.na/adele-roncey/computational-poetics-ql6o3oumt8e"
-          },
-
-          {
-
-              artist:`Manmeet Sodhi`,
-              project:`a week where I felt alone`,
-              mobile:`no`,
-              info:`A collection of lyrics that I listened to during a week where I felt alone. With music being a coping mechanism, I wanted to capture the process of healing and vulnerability through this publication.`,
-              img:"fall21/manny1.png",
-              url:"https://manmeetsodhi.com/A-Lonely-Week"
-          },
-
-          {
-
-              artist:`Ruby Miller`,
-              project:`Atom and Eve`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/atom.gif",
-              url:"fall21/atom.gif"
-          },
-          {
-
-              artist:`Joyce Ho`,
-              project:`t0wer04b@bel`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/t0we04bbel_3.jpg",
-              url:"https://tower-of-babel.glitch.me/"
-          },
+    <script src="flowers.js"></script>
 
 
-          {
 
-              artist:`Carlos Perez-Ruiz`,
-              project:`Distant Nostalgia`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/distantnostalgia.png",
-              url:"https://distant-nostalgia.glitch.me/"
-          },
-
-          {
-              artist:`Natalia Spritzer`,
-              project:`Unhinged`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/natalia.png",
-              url:"https://natalinhas.wixsite.com/unhinged"
-          },
+    <script type="module">
 
 
-          {
+        new Vue({
+            el: "#container",
+            data: {
+                shownitem: 0,
+                allItems: [
+                    {
 
-          artist:`Gabby Hoefer`,
-          project:`Mapping New York Commutes`,
-          mobile:`no`,
-          info:``,
-          img:"fall21/gabby3.png",
-          url:"https://bigcitybigmaps.glitch.me/"
-          },
-          {
+                        artist: `Ruby Miller`,
+                        project: `Between 2 Hills`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/ruby1.png",
+                        url: "https://simplistic-gem-case.glitch.me/"
+                    },
+                    {
 
-              artist:`Ruby Miller`,
-              project:`Occupants`,
-              mobile:`no`,
-              info:`A powerpoint performance on pods, occupants and the movies.`,
-              img:"fall21/ruby.gif",
-              url:"fall21/ruby.gif"
-          },
-          {
+                        artist: `Joyce Ho`,
+                        project: `Poetics of Interruption`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/poetics_of_interruption.gif",
+                        url: "https://poetics-of-interruption.glitch.me/"
+                    },
 
-              artist:`Arayla Bakhetbek`,
-              project:`(Untitled)`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/arayla3.png",
-              url:"fall21/arayla3.png"
-          },
+                    {
 
-          {
-              artist:`nick larson`,
-              project:`uncanny objects`,
-              mobile:`no`,
-              info:``,
-              img:"fall21/nick.jpg",
-              url:"https://www.are.na/nick-larson/objects-ivnmhoa37u8"
-          },
+                        artist: `Gabby Hoefer`,
+                        project: `Many Ways to Reach`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/gabby2.png",
+                        url: "https://reachh.glitch.me/"
+                    },
+
+                    {
+
+                        artist: `Carlos Perez-Ruiz`,
+                        project: `Adult Friends`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/adultfriends.png",
+                        url: "https://adult-friends.glitch.me/"
+                    },
+                    {
+
+                        artist: `Qiyang Peng`,
+                        project: `Daily Things`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/Daily_Things.png",
+                        url: "https://daily-things.glitch.me/"
+                    },
+
+                    {
+
+                        artist: `Mia Koenig`,
+                        project: `Letters to a Loved One 1`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/Letters_Project_1.png",
+                        url: "https://messages-to-loved-one.glitch.me/"
+                    },
+
+                    {
+
+                        artist: `Carlos Perez-Ruiz`,
+                        project: `Pachinko Record`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/panchikosrecord.png",
+                        url: "https://panchikos-record.glitch.me/"
+                    },
+                    {
+
+                        artist: `Mia Koenig`,
+                        project: `Letters to a Loved One 2`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/letters_project_2.png",
+                        url: "https://book-letters.glitch.me/"
+                    },
+                    {
+
+                        artist: `Qiyang Peng`,
+                        project: `Algorithm Geography`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/Algorithm_Geography.png",
+                        url: "https://algorithm-geography.glitch.me/"
+                    },
+                    {
+
+                        artist: `Arayla Bakhetbek`,
+                        project: `Alice in Browserland`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/arayla2.png",
+                        url: "https://alice-in-browserland.glitch.me/"
+                    },
 
 
-          ]
-        }
-      });
+                    {
+
+                        artist: `Adele Roncey`,
+                        project: `Glyphs & (My) Digital Self`,
+                        mobile: `no`,
+                        info: `Visual conversation between Instagram's algorithm, Marina Esmeraldo's "Breaking Free from the Feed" and my own writing and thoughts on creativity and social media.`,
+                        img: "fall21/adele2.png",
+                        url: "https://www.are.na/adele-roncey/computational-poetics-ql6o3oumt8e"
+                    },
+
+                    {
+
+                        artist: `Manmeet Sodhi`,
+                        project: `a week where I felt alone`,
+                        mobile: `no`,
+                        info: `A collection of lyrics that I listened to during a week where I felt alone. With music being a coping mechanism, I wanted to capture the process of healing and vulnerability through this publication.`,
+                        img: "fall21/manny1.png",
+                        url: "https://manmeetsodhi.com/A-Lonely-Week"
+                    },
+
+                    {
+
+                        artist: `Ruby Miller`,
+                        project: `Atom and Eve`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/atom.gif",
+                        url: "fall21/atom.gif"
+                    },
+                    {
+
+                        artist: `Joyce Ho`,
+                        project: `t0wer04b@bel`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/t0we04bbel_3.jpg",
+                        url: "https://tower-of-babel.glitch.me/"
+                    },
 
 
-</script>
+                    {
+
+                        artist: `Carlos Perez-Ruiz`,
+                        project: `Distant Nostalgia`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/distantnostalgia.png",
+                        url: "https://distant-nostalgia.glitch.me/"
+                    },
+
+                    {
+                        artist: `Natalia Spritzer`,
+                        project: `Unhinged`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/natalia.png",
+                        url: "https://natalinhas.wixsite.com/unhinged"
+                    },
+
+
+                    {
+
+                        artist: `Gabby Hoefer`,
+                        project: `Mapping New York Commutes`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/gabby3.png",
+                        url: "https://bigcitybigmaps.glitch.me/"
+                    },
+                    {
+
+                        artist: `Ruby Miller`,
+                        project: `Occupants`,
+                        mobile: `no`,
+                        info: `A powerpoint performance on pods, occupants and the movies.`,
+                        img: "fall21/ruby.gif",
+                        url: "fall21/ruby.gif"
+                    },
+                    {
+
+                        artist: `Arayla Bakhetbek`,
+                        project: `(Untitled)`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/arayla3.png",
+                        url: "fall21/arayla3.png"
+                    },
+
+                    {
+                        artist: `nick larson`,
+                        project: `uncanny objects`,
+                        mobile: `no`,
+                        info: ``,
+                        img: "fall21/nick.jpg",
+                        url: "https://www.are.na/nick-larson/objects-ivnmhoa37u8"
+                    },
+
+
+                ]
+            }
+        });
+
+
+    </script>
 
 </body>
+
 </html>
