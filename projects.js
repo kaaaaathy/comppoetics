@@ -14,7 +14,7 @@ export default
   Share also 2-3 examples of contemporary computational artworks which aligns with your theme.This can be projects, writings, initiatives from artists, advocates, policy makers working recently. For instance, anti-surveillance workshops or browser extensions, or sex worker demands to sell sex on the internet.
   <br><br>
 
-  Post these to the working <a href="https://docs.google.com/document/d/1mftukhE-jKbmGdWJ5fG7sBlNk3Cbj_5aBPrirgAKyh0/edit?tab=t.0" target="_blank">google doc</a>. For each reference, add it to the shared google doc with an image, link, and a short description. Be prepared to informally present with the class.
+  Post these to the working <a href="https://docs.google.com/document/d/11LAaD7fC9DBvf4QGgTZ1PcecQOrKwgoFrbGKAiQY2-E/edit?tab=t.0" target="_blank">google doc</a>. For each reference, add it to the shared google doc with an image, link, and a short description. Be prepared to informally present with the class.
   `
   },
   {
