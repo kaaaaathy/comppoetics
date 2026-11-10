@@ -76,7 +76,6 @@ Post your glitches in the Discord #projects channel.
     <br>
     <br>
     <li>Must draw a relationship between two or more pieces of text by different authors (one of them can be you)
-    <li>Must be performed for the class
     <li>Can use any medium of language expression: text, audio based, etc. Will you perform it? Will you use a voice interface other than yourself? Will it be silent?
     <br>
     <br>
